@@ -12,40 +12,51 @@
   <script src="./node_modules/bootstrap/dist/js/bootstrap.js" defer></script>
 </head>
 <body>
-  <main>
-    <aside class="image-container">
+  <main id="grid-container">
+    <!-- section do lado esquerdo -->
+    <section class="image-container">
       <div class="bg"></div>
-      <div>
-        <h2>Acesse sua conta ou registre-se</h2>
+      <div class="text-container">
+        <h2>Torne seu tempo ainda mais <b>produtivo</b></h2>
 
-        <p>Sabendo das dificuldades que o advogado vivencia no seu dia-a-dia, tentei materializar todos os meus anseios "digitais" em recursos inteligentes dentro dessa lawtech, com a tranquilidade de quem advoga e está disposto a abrir mão do seu tempo de lazer para se dedicar a uma nova tecnologia, sobretudo porque sabemos que uma atingindo um patamar satisfatório de eficiência, o tempo empreendido escrevendo linhas de código será compensado com tempo economizado preenchendo infindáveis formulários de cadastro de processo.</p>
+        <p>Otimize sua rotina com o software que reúne todas as ferramentas necessárias para advogar sem preocupações. Acesse sua conta ou cadastre-se na plataforma para experimentar todas as funcionalidades disponíveis do Advable.</p>
       </div>
-    </aside>
-    <div class="form-container">
+    </section>
+
+    <!-- section do lado direito -->
+    <section class="form-container">
+      <img src="./imagens/logotipo.png" alt="">
+
       <div class="form-content">
+
         <div class="form-items">
+          <!-- botões de acesso e registro -->
           <div class="login-registro">
             <a href="#">Acesso</a>
             <a href="#">Registro</a>
           </div>
+
           <form action="">
+              <!-- inputs -->
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email</label>
+                <input type="email" class="form-control" id="floatingEmail" placeholder="nome@exemplo.com">
+                <label for="floatingEamail">Email</label>
               </div>
               <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Senha</label>
+                <input type="password" class="form-control" id="floatingSenha" placeholder="Senha">
+                <label for="floatingSenha">Senha</label>
               </div>
+
+            <!-- botões de baixo -->
             <div class="form-btns">
               <button type="button" class="btn btn-primary">Entrar</button>
               <a href="#">Esqueceu sua senha?</a>
+            </div>
+
           </form>
         </div>
       </div>
-    </div>
-
-    </form>
+    </section>
   </main>
 </body>
 </html>

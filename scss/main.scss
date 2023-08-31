@@ -1,43 +1,90 @@
-// .form-holder {
-// } rgb(118, 72, 233);
 @import './components/colors';
 
-*, *::before, *::after {
+*,::before, *::after {
   box-sizing: border-box;
   margin: 0;
 }
 
 body {
-  font-family: $font;
+  font-family: 'Lato', sans-serif !important;
   font-size: 16px;
   height: 100vh;
-  display: flex;
 
-  .image-container {
-    width: 550px;
-    height: 100%;
-    background-color: $purple;
-    @media (min-height: 700px) {
-      position: fixed;
+  #grid-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 100vh;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
     }
-  }
 
-  .form-container {
-    margin-left: 550px;
-    display: flex;
-    min-height: 100%;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    position: relative;
+    .image-container {
+      background-color: $purple;
+      display: flex;
+      align-items: center;
+      @media (max-width: 768px) {
+        display: none;
+      }
 
-    .form-content {
-      position: relative;
-      padding: 60px;
-      min-height: 100%;
-      text-align: center;
-      width: 100%;
+      .text-container {
+        max-width: 500px;
+        padding: 3rem;
+        margin: auto;
+        line-height: 1.8rem;
 
+        h2 {
+          padding-bottom: 1.5rem;
+          text-align: center;
+          color: white;
+          line-height: 3rem;
+        }
+
+        p {
+          color: white;
+          opacity: .7;
+        }
+      }
+    }
+
+    .form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-width: 400px;
+      
+      img {
+        max-width: 80px;
+        margin-bottom: 3rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: $purple;
+      }
+
+      .form-content {
+        width: 50%;
+        @media (max-width: 768px) {
+          min-width: 300px;
+        }
+        
+        .login-registro {
+          padding-bottom: 1rem;
+
+          a:first-child {
+            margin-right: 1rem;
+          }
+        }
+
+        .form-btns {
+          padding-top: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
     }
   }
 }
