@@ -1,0 +1,43 @@
+// .form-holder {
+// } rgb(118, 72, 233);
+@import './components/colors';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: $font;
+  font-size: 16px;
+  height: 100vh;
+  display: flex;
+
+  .image-container {
+    width: 550px;
+    height: 100%;
+    background-color: $purple;
+    @media (min-height: 700px) {
+      position: fixed;
+    }
+  }
+
+  .form-container {
+    margin-left: 550px;
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+
+    .form-content {
+      position: relative;
+      padding: 60px;
+      min-height: 100%;
+      text-align: center;
+      width: 100%;
+
+    }
+  }
+}
