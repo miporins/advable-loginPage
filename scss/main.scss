@@ -1,24 +1,21 @@
-
-// Option B: Include parts of Bootstrap
-// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-
-// 2. Include any default variable overrides here
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 // CAROL AQUI VOCÊ CUSTOMIZA AS VARIAVEIS:
 // $body-bg: #000;
 // $body-color: #111;
+$font-family-sans-serif: 'Lato', sans-serif;
 $purple: rgb(118, 72, 233);
-
 $primary: #b62084;
 
 // ESSE CUSTOM É O SEU SCSS
-@import "../scss/custom";
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/functions";
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
+@import "../scss/custom";
+
 
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
