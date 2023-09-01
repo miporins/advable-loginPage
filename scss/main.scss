@@ -1,90 +1,34 @@
-@import './components/colors';
 
-*,::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-}
+// Option B: Include parts of Bootstrap
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 
-body {
-  font-family: 'Lato', sans-serif !important;
-  font-size: 16px;
-  height: 100vh;
+// 2. Include any default variable overrides here
 
-  #grid-container {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    height: 100vh;
+// CAROL AQUI VOCÊ CUSTOMIZA AS VARIAVEIS:
+// $body-bg: #000;
+// $body-color: #111;
+$purple: rgb(118, 72, 233);
 
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
+$primary: #b62084;
 
-    .image-container {
-      background-color: $purple;
-      display: flex;
-      align-items: center;
-      @media (max-width: 768px) {
-        display: none;
-      }
+// ESSE CUSTOM É O SEU SCSS
+@import "../scss/custom";
 
-      .text-container {
-        max-width: 500px;
-        padding: 3rem;
-        margin: auto;
-        line-height: 1.8rem;
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/functions";
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
 
-        h2 {
-          padding-bottom: 1.5rem;
-          text-align: center;
-          color: white;
-          line-height: 3rem;
-        }
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
 
-        p {
-          color: white;
-          opacity: .7;
-        }
-      }
-    }
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
 
-    .form-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      min-width: 400px;
-      
-      img {
-        max-width: 80px;
-        margin-bottom: 3rem;
-      }
-
-      a {
-        text-decoration: none;
-        color: $purple;
-      }
-
-      .form-content {
-        width: 50%;
-        @media (max-width: 768px) {
-          min-width: 300px;
-        }
-        
-        .login-registro {
-          padding-bottom: 1rem;
-
-          a:first-child {
-            margin-right: 1rem;
-          }
-        }
-
-        .form-btns {
-          padding-top: 1rem;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-      }
-    }
-  }
-}
