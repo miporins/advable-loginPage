@@ -47,6 +47,12 @@
               <form role="form" method="POST" action="">
                 <input type="hidden" name="_token" value="">
                 <div class="form-group">
+                  <label class="control-label">Nome completo</label>
+                  <div>
+                      <input type="name" class="form-control input-lg" name="nome" value="" placeholder="Fulaninho">
+                  </div>
+              </div>
+                <div class="form-group">
                     <label class="control-label">Email</label>
                     <div>
                         <input type="email" class="form-control input-lg" name="email" value="" placeholder="exemplo@gmail.com">
@@ -55,24 +61,22 @@
                 <div class="form-group">
                     <label class="control-label">Senha</label>
                     <div>
-                        <input type="password" class="form-control input-lg" name="senha" placeholder="Insira sua senha de acesso">
+                        <input type="password" class="form-control input-lg" name="senha" placeholder="Crie sua senha de acesso">
                     </div>
                 </div>
+
                 <div class="form-group">
-                    <div >
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox" name="lembrar"> <span>Lembrar</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
+                  <label class="control-label">Repita a senha</label>
+                  <div>
+                      <input type="password" class="form-control input-lg" name="senha" placeholder="Repita sua senha de acesso">
+                  </div>
+              </div>
             </form>
 
             <!-- botões de baixo -->
             <div class="form-btns">
-              <button type="button" class="btn btn-primary">Entrar</button>
-              <a href="#" class="fromCenter">Esqueceu sua senha?</a>
+              <button type="button" class="btn btn-primary">Registrar</button>
+              <a href="index.html" class="fromCenter">Já possui um cadastro?</a>
             </div>
 
           </form>
