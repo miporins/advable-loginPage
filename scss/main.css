@@ -11977,48 +11977,10 @@ textarea.form-control-lg {
   margin: 0;
 }
 
-.btn {
-  border-radius: 0.8rem;
-}
-
-.form-control {
-  border-radius: 1rem;
-}
-
-.form-floating > label {
-  padding: 1rem 1rem;
-}
-
-a {
-  --border-width: 2px;
-  --bottom-distance: 0px;
-  display: inline-block;
-  border-radius: 1px;
-  background-image: linear-gradient(#6610f2, #6610f2);
-  background-size: 0% 2px;
-  background-repeat: no-repeat;
-  transition: background-size 0.3s;
-}
-
-.fromRight {
-  background-position: 100% calc(100% - var(--bottom-distance));
-}
-
-.fromLeft {
-  background-position: 0 calc(100% - var(--bottom-distance));
-}
-
-a:hover {
-  background-size: 100% var(--border-width);
-}
-
-.fromCenter {
-  background-position: 50% calc(100% - var(--bottom-distance));
-}
-
 body {
   font-size: 16px;
   height: 100vh;
+  background-color: red;
 }
 body #grid-container {
   display: grid;
@@ -12086,33 +12048,106 @@ body #grid-container .form-container {
   min-width: 400px;
 }
 body #grid-container .form-container img {
-  max-width: 80px;
-  margin-bottom: 3rem;
+  margin-bottom: 20px;
 }
-body #grid-container .form-container a {
-  text-decoration: none;
-  font-size: large;
-  font-weight: bold;
+@media (min-width: 768px) {
+  body #grid-container .form-container img {
+    display: none;
+  }
 }
 body #grid-container .form-container .form-content {
   width: 50%;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
 }
-@media (max-width: 768px) {
-  body #grid-container .form-container .form-content {
-    min-width: 300px;
-  }
+body #grid-container .form-container .form-content a {
+  --border-width: 2px;
+  --bottom-distance: 0px;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 1px;
+  background-image: linear-gradient(#6610f2, #6610f2);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s;
+}
+body #grid-container .form-container .form-content .fromRight {
+  background-position: 100% calc(100% - var(--bottom-distance));
+}
+body #grid-container .form-container .form-content .fromLeft {
+  background-position: 0 calc(100% - var(--bottom-distance));
+}
+body #grid-container .form-container .form-content .fromCenter {
+  background-position: 50% calc(100% - var(--bottom-distance));
+}
+body #grid-container .form-container .form-content a:hover {
+  background-size: 100% var(--border-width);
 }
 body #grid-container .form-container .form-content .login-registro {
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+  body #grid-container .form-container .form-content .login-registro {
+    text-align: center;
+  }
 }
 body #grid-container .form-container .form-content .login-registro a:first-child {
-  margin-right: 1rem;
+  margin-right: 1.3rem;
+}
+body #grid-container .form-container .form-content .form-control {
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #e9ecef;
+}
+body #grid-container .form-container .form-content .form-control::-moz-placeholder {
+  color: #adb5bd;
+}
+body #grid-container .form-container .form-content .form-control::placeholder {
+  color: #adb5bd;
+}
+body #grid-container .form-container .form-content .form-control:focus, body #grid-container .form-container .form-content .form-control:hover {
+  outline: 1px solid #ced4da;
+}
+body #grid-container .form-container .form-content .form-control:focus::-moz-placeholder {
+  opacity: 0.7;
+}
+body #grid-container .form-container .form-content .form-control:focus::placeholder {
+  opacity: 0.7;
+}
+body #grid-container .form-container .form-content .form-group {
+  margin-bottom: 1.2rem;
+}
+body #grid-container .form-container .form-content .form-group .checkbox {
+  display: flex;
+  align-items: center;
+}
+body #grid-container .form-container .form-content .form-group .checkbox span {
+  margin-left: 4px;
+}
+body #grid-container .form-container .form-content .control-label {
+  margin-bottom: 5px;
 }
 body #grid-container .form-container .form-content .form-btns {
-  padding-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 10px;
+}
+body #grid-container .form-container .form-content .form-btns .btn {
+  border-radius: 0.5rem;
+  padding: 4px 1.3rem;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+  border: none;
+}
+body #grid-container .form-container .form-content .form-btns .btn:hover {
+  background-color: #6610f2;
+  box-shadow: 1px 2px 3px 0 #adb5bd;
 }
 
 :root,

@@ -85,9 +85,6 @@ body {
 
       .form-content {
         width: 50%;
-        @media (max-width: 768px) {
-          min-width: 300px;
-        }
 
         a {
           --border-width: 2px;
@@ -98,14 +95,26 @@ body {
           font-weight: bold;
           display: inline-block;
           border-radius: 1px;
+        }
+
+        .a-lines {
           background-image: linear-gradient($indigo, $indigo);
           background-size: 0% 2px;
           background-repeat: no-repeat;
+          
           transition: background-size 0.3s;
         }
-        
+
         .fromRight {
           background-position: 100% calc(100% - var(--bottom-distance));
+        }
+
+        .acesso, .registro {
+          background-image: linear-gradient($indigo, $indigo);
+        }
+
+        .fromRight:hover, .fromLeft:hover, .fromCenter:hover {
+          background-size: 100% var(--border-width);
         }
         
         .fromLeft {
@@ -115,13 +124,11 @@ body {
         .fromCenter {
           background-position: 50% calc(100% - var(--bottom-distance));
         }
-        
-        a:hover {
-          background-size: 100% var(--border-width);
-        }
 
         .login-registro {
-          padding-bottom: 1.5rem;
+          padding-bottom: 3rem;
+          display: flex;
+          align-items: center;
 
           @media (max-width: 768px) {
             text-align: center;
@@ -136,6 +143,7 @@ body {
           border-radius: .5rem;
           border: none;
           background-color: $gray-200;
+          padding: 13px;
         }
 
         .form-control::placeholder {
@@ -151,7 +159,7 @@ body {
         }
 
         .form-group {
-          margin-bottom: 1.2rem;
+          margin-bottom: 2.5rem;
 
           .checkbox {
             display: flex;
@@ -175,10 +183,11 @@ body {
 
           .btn {
             border-radius: .5rem;
-            padding: 4px 1.3rem;
-            font-size: 14px;
+            padding: 6px 1.3rem;
+            font-size: 12px;
             transition: .3s ease-in-out;
             border: none;
+            font-weight: bold;
           }
 
           .btn:hover {
