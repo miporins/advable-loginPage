@@ -109,11 +109,8 @@ body {
           background-position: 100% calc(100% - var(--bottom-distance));
         }
 
-        .acesso, .registro {
-          background-image: linear-gradient($indigo, $indigo);
-        }
 
-        .fromRight:hover, .fromLeft:hover, .fromCenter:hover {
+        .fromRight:hover, .fromLeft:hover, .fromCenter:hover, .fromRight.active, .fromLeft.active, .fromCenter.active {
           background-size: 100% var(--border-width);
         }
         

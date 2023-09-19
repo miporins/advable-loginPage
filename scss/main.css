@@ -11980,7 +11980,6 @@ textarea.form-control-lg {
 body {
   font-size: 16px;
   height: 100vh;
-  background-color: red;
 }
 body #grid-container {
   display: grid;
@@ -12057,11 +12056,6 @@ body #grid-container .form-container img {
 }
 body #grid-container .form-container .form-content {
   width: 50%;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
 }
 body #grid-container .form-container .form-content a {
   --border-width: 2px;
@@ -12071,6 +12065,8 @@ body #grid-container .form-container .form-content a {
   font-weight: bold;
   display: inline-block;
   border-radius: 1px;
+}
+body #grid-container .form-container .form-content .a-lines {
   background-image: linear-gradient(#6610f2, #6610f2);
   background-size: 0% 2px;
   background-repeat: no-repeat;
@@ -12079,17 +12075,19 @@ body #grid-container .form-container .form-content a {
 body #grid-container .form-container .form-content .fromRight {
   background-position: 100% calc(100% - var(--bottom-distance));
 }
+body #grid-container .form-container .form-content .fromRight:hover, body #grid-container .form-container .form-content .fromLeft:hover, body #grid-container .form-container .form-content .fromCenter:hover, body #grid-container .form-container .form-content .fromRight.active, body #grid-container .form-container .form-content .fromLeft.active, body #grid-container .form-container .form-content .fromCenter.active {
+  background-size: 100% var(--border-width);
+}
 body #grid-container .form-container .form-content .fromLeft {
   background-position: 0 calc(100% - var(--bottom-distance));
 }
 body #grid-container .form-container .form-content .fromCenter {
   background-position: 50% calc(100% - var(--bottom-distance));
 }
-body #grid-container .form-container .form-content a:hover {
-  background-size: 100% var(--border-width);
-}
 body #grid-container .form-container .form-content .login-registro {
-  padding-bottom: 1.5rem;
+  padding-bottom: 3rem;
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 768px) {
   body #grid-container .form-container .form-content .login-registro {
@@ -12103,6 +12101,7 @@ body #grid-container .form-container .form-content .form-control {
   border-radius: 0.5rem;
   border: none;
   background-color: #e9ecef;
+  padding: 13px;
 }
 body #grid-container .form-container .form-content .form-control::-moz-placeholder {
   color: #adb5bd;
@@ -12120,7 +12119,7 @@ body #grid-container .form-container .form-content .form-control:focus::placehol
   opacity: 0.7;
 }
 body #grid-container .form-container .form-content .form-group {
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.5rem;
 }
 body #grid-container .form-container .form-content .form-group .checkbox {
   display: flex;
@@ -12140,10 +12139,11 @@ body #grid-container .form-container .form-content .form-btns {
 }
 body #grid-container .form-container .form-content .form-btns .btn {
   border-radius: 0.5rem;
-  padding: 4px 1.3rem;
-  font-size: 14px;
+  padding: 6px 1.3rem;
+  font-size: 12px;
   transition: 0.3s ease-in-out;
   border: none;
+  font-weight: bold;
 }
 body #grid-container .form-container .form-content .form-btns .btn:hover {
   background-color: #6610f2;
