@@ -13,3 +13,5 @@ To start using SASS, use the command:
 This code above is an abbreviation of `sass --watch ./scss/main.scss ./assets/css//main.css --style compressed`
 
 Para editar as variaveis do BOOTSTRAP (`$primary`, `$secondary`, `$purple`) você usa o arquivo `main.scss`. Para editar o arquivo SCSS que você tinha criado, use o arquivo `custom.scss`
+
+

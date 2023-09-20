@@ -126,6 +126,7 @@ body {
           padding-bottom: 3rem;
           display: flex;
           align-items: center;
+          justify-content: space-evenly;
 
           @media (max-width: 768px) {
             text-align: center;

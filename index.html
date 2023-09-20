@@ -9,9 +9,76 @@
   <link rel="stylesheet" href="./assets/css/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
 
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.js" defer></script>
 </head>
 <body>
-  Landing
+  <main id="grid-container">
+    <!-- section do lado esquerdo -->
+    <section class="image-container">
+      <div class="bg">
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+          <source src="assets/bgvideo2.mp4" type="video/mp4">
+        </video>
+        <div class="text-container leftside-content d-flex flex-column">
+          <img src="./assets/imagens/logotipo.svg" height="65px" alt="" class="m-auto pb-2">
+          <h2 class="pb-2">Aproveite seu tempo para fazer o que gosta</h2>
+          <p>Com o Advable seu escritório está em boas mãos. Seu tempo não vai ser desperdiçado.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- section do lado direito -->
+    <section class="form-container">
+
+      <img src="./assets/imagens/logotipo.svg" height="65px" alt="" class="img-m">
+      
+      <div class="form-content">
+
+        <div class="form-items">
+          <!-- botões de acesso e registro -->
+          <div class="login-registro">
+            <a href="login.html" class="fromLeft a-lines active">Acesso</a>
+            <a href="registro.html" class="fromLeft a-lines">Registro</a>
+          </div>
+
+          <form>
+              <!-- inputs -->
+              <form role="form" method="POST" action="">
+                <input type="hidden" name="_token" value="">
+                <div class="form-group">
+                    <label class="control-label">Email</label>
+                    <div>
+                        <input type="email" class="form-control input-lg" name="email" value="" placeholder="exemplo@gmail.com">
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="control-label">Senha</label>
+                    <div>
+                        <input type="password" class="form-control input-lg" name="senha" placeholder="Insira sua senha de acesso">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div >
+                        <div>
+                            <label class="checkbox">
+                                <input type="checkbox" name="lembrar"> <span>Lembrar</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- botões de baixo -->
+            <div class="form-btns">
+              <a href="dashboard.html" class="btn btn-primary">ENTRAR</a>
+              <a href="senha.html" class="fromCenter a-lines">Esqueceu sua senha?</a>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
-<script src="./node_modules/bootstrap/dist/js/bootstrap.js" defer></script>
 </html>

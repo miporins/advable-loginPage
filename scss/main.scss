@@ -5,6 +5,8 @@
 // $body-color: #111;
 $font-family-sans-serif: 'Lato', sans-serif;
 $primary: #2e2116;
+$bg-primary: #1d1d1d;
+$btn-primary: #7854f6;
 // ESSE CUSTOM É O SEU SCSS
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -29,3 +31,4 @@ $primary: #2e2116;
 @import "../node_modules/bootstrap/scss/grid";
 @import "../node_modules/bootstrap/scss/helpers";
 
+@import "../node_modules/bootstrap/scss/dropdown";
