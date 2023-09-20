@@ -20,6 +20,7 @@ $sidebar-left-width: 163px;
   grid-template-rows: 1fr;
   grid-template-areas: "sidebar content";
 
+
   .sidebar-left {
     grid-area: sidebar;
     background-color: #1D1D1D;
@@ -32,6 +33,19 @@ $sidebar-left-width: 163px;
     padding: 20px;
     background-color: #fafafa;
   }
+
+  &.hide-sidebar {
+    grid-template-columns: 1fr;
+  
+    .sidebar-left {
+      display: none;
+    }
+  
+    .content-right {
+      grid-area: 1 / 1 / 2 / 2; // Estica o content-right para ocupar todo o espaço disponível
+    }
+  }
+  
   
   // create a media query to change the grid-template-columns to 1fr when the screen size is less than 768px
   @media (max-width: 768px) {

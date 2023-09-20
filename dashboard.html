@@ -10,37 +10,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-  <script src="./node_modules/bootstrap/dist/css/bootstrap.css" defer></script>
-  <script src="./node_modules/bootstrap/dist/js/bootstrap.js" defer></script>
-
 </head>
 <body class="d-flex h-100">
   <div class="w-100">
     <nav class="navbar">
       <div class="container-fluid">
         <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-        <a href="#"><i class="bi bi-arrow-bar-left"></i></a>
-
+        <button id="hideSidebar" onclick="hideSidebar()"><i class="bi bi-chevron-double-left"></i></button>
       </div>
     </nav>
     <div class="main">
       <div class="sidebar-left">
-        main
-        
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-bg-dark">An item</li>
+          <li class="list-group-item text-bg-dark">A second item</li>
+          <li class="list-group-item text-bg-dark">A third item</li>
+          <li class="list-group-item text-bg-dark">A fourth item</li>
+          <li class="list-group-item text-bg-dark">And a fifth one</li>
+        </ul>
       </div>
       <div class="content-right">
         
       </div>
     </div>
   </div>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js" ></script>
+  <script>
+    function hideSidebar () {
+      document.querySelector('.main').classList.toggle('hide-sidebar')
+    }
+  </script>
 </body>
-<script src="./node_modules/bootstrap/dist/js/bootstrap.js" defer></script>
 </html>
 
-
-<!-- Anotações sobre implementações -->
-
-<!--
-  dropdown nos botões do lado direito do menu 
-  
--->
