@@ -1,10 +1,45 @@
-.btn-teste {
-  background-color: $indigo;
+
+$navbar-height: 49.7px;
+$sidebar-left-width: 163px;
+
+// create a class to get navbar height and subtract from the height of the main class
+
+.navbar {
+  height: $navbar-height;
+  padding: 0px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.05), 0 0 1px rgba(0,0,0,.25);
 }
 
-.btn-primary {
-  background-color: $btn-primary;
-  border-color: $btn-primary;
-  color: #fff;
+// Path: scss/dashboard.scss
+.main {
+  min-height: calc(100vh - $navbar-height);
+  padding-top: -$navbar-height;
+  // create two columns. one for the sidebar-left and one for the content=right
+  display: grid;
+  grid-template-columns: $sidebar-left-width 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "sidebar content";
 
+  .sidebar-left {
+    grid-area: sidebar;
+    background-color: #1D1D1D;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .content-right {
+    grid-area: content;
+    padding: 20px;
+    background-color: #fafafa;
+  }
+  
+  // create a media query to change the grid-template-columns to 1fr when the screen size is less than 768px
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "content";
+  }
+  
 }
+
+
