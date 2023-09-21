@@ -37,7 +37,6 @@
   </div>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js" ></script>
   <script>
-
     let hover = document.querySelector('#hoverSidebar');
     let hide = document.querySelector('#hideSidebar');
     let main = document.querySelector('.main');
@@ -48,7 +47,7 @@
       hide.style.display = 'none';
       setTimeout(() => {
         hover.style.display = 'block';
-      }, 200);
+      }, 10);
     }
 
     hover.addEventListener('mouseenter', () => {
