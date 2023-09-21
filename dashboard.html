@@ -67,21 +67,7 @@
         sidebar.classList.remove('visible');
       }
     });
-    hover.addEventListener('mouseenter', () => {
-      sidebar.classList.add('visible'); 
-    });
-
-    hover.addEventListener('mouseleave', () => {
-      if(!sidebar.contains(event.relatedTarget)) {
-        sidebar.classList.remove('visible');
-      }
-    });
-
-    sidebar.addEventListener('mouseleave', () => {
-      if(main.classList.contains('hide-sidebar')) {
-        sidebar.classList.remove('visible');
-      }
-    });
+ 
   </script>
 </body>
 </html>
