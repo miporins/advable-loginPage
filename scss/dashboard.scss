@@ -57,10 +57,16 @@ $sidebar-left-width: 163px;
     grid-template-columns: 1fr;
   
     .sidebar-left {
-      display: none;
       width: $sidebar-left-width;
+      transform: translateX(-100%); // inicia fora da tela pela esquerda
+      transition: transform 0.3s ease-out, visibility 0.3s ease-out, opacity 0.3s ease-out; // adiciona animação // adiciona animação
+      visibility: hidden;
+      &.visible {
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+      }
     }
-  
     .content-right {
       grid-area: 1 / 1 / 2 / 2; // Estica o content-right para ocupar todo o espaço disponível
     }
@@ -68,11 +74,11 @@ $sidebar-left-width: 163px;
   
   
   // create a media query to change the grid-template-columns to 1fr when the screen size is less than 768px
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "content";
-  }
+  // @media (max-width: 768px) {
+  //   grid-template-columns: 1fr;
+  //   grid-template-rows: auto;
+  //   grid-template-areas: "content";
+  // }
   
 }
 

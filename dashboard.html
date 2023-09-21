@@ -31,7 +31,7 @@
         </ul>
       </div>
       <div class="content-right">
-        
+        Conteúdo
       </div>
     </div>
   </div>
@@ -52,14 +52,12 @@
     }
 
     hover.addEventListener('mouseenter', () => {
-      sidebar.style.display = 'block';
       sidebar.classList.add('visible'); 
     });
 
     hover.addEventListener('mouseleave', () => {
       // Check if the cursor is over the sidebar-left or not
       if(!sidebar.contains(event.relatedTarget)) {
-        sidebar.style.display = 'none'; 
         sidebar.classList.remove('visible');
       }
     });
@@ -67,11 +65,24 @@
     sidebar.addEventListener('mouseleave', () => {
       // Only hide the sidebar if the main class has the "hide-sidebar" class
       if(main.classList.contains('hide-sidebar')) {
-        sidebar.style.display = 'none'; 
+        sidebar.classList.remove('visible');
+      }
+    });
+    hover.addEventListener('mouseenter', () => {
+      sidebar.classList.add('visible'); 
+    });
+
+    hover.addEventListener('mouseleave', () => {
+      if(!sidebar.contains(event.relatedTarget)) {
         sidebar.classList.remove('visible');
       }
     });
 
+    sidebar.addEventListener('mouseleave', () => {
+      if(main.classList.contains('hide-sidebar')) {
+        sidebar.classList.remove('visible');
+      }
+    });
   </script>
 </body>
 </html>
