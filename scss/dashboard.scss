@@ -10,6 +10,24 @@ $sidebar-left-width: 163px;
   box-shadow: 0 1px 4px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.05), 0 0 1px rgba(0,0,0,.25);
 }
 
+#hoverSidebar {
+  cursor: pointer;
+  ::after {
+    // criar espaço invisivel após o elemento
+    content: "";
+    display: block;
+    position: absolute;
+    top: 38px; // Move o pseudo-elemento para cima pelo tamanho da lacuna
+    width: 40px;
+    left: 0;
+    right: 0;
+    height: 25px; // Define a altura do pseudo-elemento para o tamanho da lacuna
+    // background-color: black; // Garante que o pseudo-elemento seja invisível
+    cursor: initial;
+  }
+}
+
+
 // Path: scss/dashboard.scss
 .main {
   min-height: calc(100vh - $navbar-height);
@@ -26,6 +44,7 @@ $sidebar-left-width: 163px;
     background-color: #1D1D1D;
     overflow-y: auto;
     overflow-x: hidden;
+
   }
 
   .content-right {
@@ -39,6 +58,7 @@ $sidebar-left-width: 163px;
   
     .sidebar-left {
       display: none;
+      width: $sidebar-left-width;
     }
   
     .content-right {
