@@ -8,6 +8,22 @@ $sidebar-left-width: 163px;
   height: $navbar-height;
   padding: 0px;
   box-shadow: 0 1px 4px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.05), 0 0 1px rgba(0,0,0,.25);
+  background-color: $bg-primary;
+  
+  .menutoggle-style {
+    color: white;
+    background-color: $btn-primary;
+  }
+}
+
+.sidebar-style {
+  color: white;
+  background-color: $bg-primary;
+}
+
+.btn-adicionar {
+  color: white;
+  background-color: $btn-primary;
 }
 
 #hoverSidebar {
@@ -44,7 +60,6 @@ $sidebar-left-width: 163px;
     background-color: #1D1D1D;
     overflow-y: auto;
     overflow-x: hidden;
-
   }
 
   .content-right {
