@@ -1,5 +1,5 @@
 
-$navbar-height: 41px;
+$navbar-height: 42px;
 $sidebar-left-width: 180px;
 $sidebar-hovercolor: #0b0b0b;
 // create a class to get navbar height and subtract from the height of the main class
@@ -18,7 +18,7 @@ $sidebar-hovercolor: #0b0b0b;
   .btn {
     background-color: white;
     border: none;
-    color: rgb(54, 52, 52);
+    opacity: .5;
   }
 
 }
@@ -31,7 +31,6 @@ $sidebar-hovercolor: #0b0b0b;
 }
 
 .sidebar-style:hover {
-  color: white;
   opacity: .9;
   cursor: pointer;
 }
