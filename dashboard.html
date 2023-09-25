@@ -14,25 +14,39 @@
 <body class="d-flex h-100">
   <div class="w-100">
     <nav class="navbar">
-      <div class="container-fluid px-0">
+      <div class="container-fluid px-0 align-items-center">
         <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-        <div class="d-flex">
+        
+        
+        <div class="d-flex align-items-center">
           <!-- <img class="ps-2 pe-1" src="./assets/imagens/logotipo.svg" alt=""> -->
-          <button id="hideSidebar" class="ms-2 menutoggle-style rounded-2 border border-0" style="z-index: 1000;" onclick="hideSidebar()">
-            <i class="bi bi-chevron-double-left"></i>
-          </button>
-          <button id="hoverSidebar" class="ms-2 menutoggle-style rounded-2 border border-0" style="display: none;">
-            <i class="bi bi-list"></i>
-          </button>
-
+          <div>
+            <div class="dropdown">
+              <a class="text-decoration-none align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div></div>
+                <textarea class="p-1 m-1 border border-0" style="resize: none" cols="15" rows="1"></textarea><i class="bi bi-caret-down-fill"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Perfil 1</a></li>
+                <li><a class="dropdown-item" href="#">Perfil 2</a></li>
+                <li><a class="dropdown-item" href="#">Perfil 3</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <button id="hideSidebar" class="ms-2 menutoggle-style rounded-2 border border-0" style="z-index: 1000;" onclick="hideSidebar()">
+              <i class="bi bi-chevron-double-left"></i>
+            </button>
+            <button id="hoverSidebar" class="ms-2 menutoggle-style rounded-2 border border-0" style="display: none;">
+              <i class="bi bi-list"></i>
+            </button>
+          </div>
         </div>
 
-
-        <div>
-
+        <div class="d-flex">
           <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
+            <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-bell"></i>
             </button>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Action</a></li>
@@ -40,20 +54,28 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </div>
-
+          <div class="dropdown">
+            <a href="#" data-bs-toggle="dropdown">
+            <img class="w-50 rounded-5" src="https://ui-avatars.com/api/?name=R+S&color=7F9CF5&background=EBF4FF" alt=""></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Configurações de conta</a></li>
+              <li><a class="dropdown-item" href="#">Suporte</a></li>
+              <li><a class="dropdown-item" href="#">Sair da conta</a></li>
+            </ul>
+          </div>
         </div>
 
       </div>
     </nav>
     <div class="main">
       <div class="sidebar-left">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item sidebar-style border-0"><i class="bi bi-layout-text-sidebar-reverse pe-2"></i>Dashboard</li>
-          <li class="list-group-item sidebar-style border-0"><i class="bi bi-file-earmark-medical pe-2"></i>Processos</li>
-          <li class="list-group-item sidebar-style border-0"><i class="bi bi-calendar-week pe-2"></i>Tarefas</li>
-          <li class="list-group-item sidebar-style border-0"><i class="bi bi-piggy-bank pe-2"></i>Finanças</li>
-          <li class="list-group-item sidebar-style border-0"><i class="bi bi-bank2 pe-2"></i>Jurisdições</li>
-          <li class="list-group-item sidebar-style border-0"><i class="bi bi-person-gear pe-2"></i>Pessoas</li>
+        <ul class="list-group list-group-flush my-3">
+          <li class="list-group-item sidebar-style border-0 nav-link"><i class="bi bi-layout-text-sidebar-reverse pe-4"></i>Dashboard</li>
+          <li class="list-group-item sidebar-style border-0"><i class="bi bi-file-earmark-medical pe-4"></i>Processos</li>
+          <li class="list-group-item sidebar-style border-0"><i class="bi bi-calendar-week pe-4"></i>Tarefas</li>
+          <li class="list-group-item sidebar-style border-0"><i class="bi bi-piggy-bank pe-4"></i>Finanças</li>
+          <li class="list-group-item sidebar-style border-0"><i class="bi bi-bank2 pe-4"></i>Jurisdições</li>
+          <li class="list-group-item sidebar-style border-0"><i class="bi bi-person-gear pe-4"></i>Pessoas</li>
         </ul>
       </div>
       <div class="content-right">

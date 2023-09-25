@@ -1,8 +1,9 @@
 
-$navbar-height: 49.7px;
-$sidebar-left-width: 163px;
-
+$navbar-height: 41px;
+$sidebar-left-width: 180px;
+$sidebar-hovercolor: #0b0b0b;
 // create a class to get navbar height and subtract from the height of the main class
+
 
 .navbar {
   height: $navbar-height;
@@ -13,11 +14,26 @@ $sidebar-left-width: 163px;
     color: $gray-500;
     background-color: white;
   }
+
+  .btn {
+    background-color: white;
+    border: none;
+    color: rgb(54, 52, 52);
+  }
+
 }
 
 .sidebar-style {
   color: white;
   background-color: $bg-primary;
+  opacity: .7;
+  transition: .2s;
+}
+
+.sidebar-style:hover {
+  color: white;
+  opacity: .9;
+  cursor: pointer;
 }
 
 .btn-adicionar {
