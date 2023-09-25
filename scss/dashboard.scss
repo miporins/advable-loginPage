@@ -1,6 +1,6 @@
 
 $navbar-height: 35px;
-$sidebar-left-width: 150px;
+$sidebar-left-width: 170px;
 $sidebar-hovercolor: #0b0b0b;
 // create a class to get navbar height and subtract from the height of the main class
 
@@ -19,6 +19,18 @@ $sidebar-hovercolor: #0b0b0b;
     background-color: white;
     border: none;
     opacity: .5;
+  }
+
+  .bi-chevron-expand, .bi-plus-circle {
+    color: $gray-500;
+  }
+
+  .dropdown-menu a {
+    text-decoration: none;
+
+    .img-size {
+      width: 25px;
+    }
   }
 
 }
