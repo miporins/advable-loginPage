@@ -6,7 +6,7 @@ $sidebar-hovercolor: #0b0b0b;
 
 
 .navbar {
-  height: $navbar-height;
+  // height: $navbar-height;
   padding: 0px;
   box-shadow: 0 1px 4px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.05), 0 0 1px rgba(0,0,0,.25);
   
@@ -31,6 +31,10 @@ $sidebar-hovercolor: #0b0b0b;
     .img-size {
       width: 25px;
     }
+  }
+
+  .img-size {
+    width: 30px;
   }
 
 }

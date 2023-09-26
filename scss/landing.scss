@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  nav {
+    form {
+      .btns-landing {
+        color: white!important;
+        background-color: $btn-opacity!important;
+        opacity: 1!important;
+        transition: .3s;
+      }
+
+      .btns-landing:hover {
+        background-color: $btn-primary!important;
+      }
+
+      .btn-acesso {
+        background-color: transparent!important;
+        color: white!important;
+        opacity: 1!important;
+        border: 1px solid $btn-opacity!important;
+      }
+      .btn-acesso:hover {
+        background-color: $btn-primary!important;
+      }
+    }
+  }
+  
+}
