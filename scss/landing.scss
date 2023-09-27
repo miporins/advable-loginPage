@@ -27,5 +27,31 @@ body {
       }
     }
   }
+
+  .section-darker {
+    background-color: #fffcf7;
+    color: #5b5e66;
+  }
+
+  .description {
+    padding: 6rem 0;
+  }
+
+  .functions {
+    .card {
+      background-color: rgb(53, 60, 70);
+      
+      .card-title {
+      }
+
+      .card-text {
+        // max-width: 16em;
+      }
+    }
+  }
+
+  section .icons-style {
+    font-size: 40px;
+  }
   
 }
