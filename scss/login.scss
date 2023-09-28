@@ -101,14 +101,12 @@ body {
           background-image: linear-gradient($indigo, $indigo);
           background-size: 0% 2px;
           background-repeat: no-repeat;
-          
           transition: background-size 0.3s;
         }
 
         .fromRight {
           background-position: 100% calc(100% - var(--bottom-distance));
         }
-
 
         .fromRight:hover, .fromLeft:hover, .fromCenter:hover, .fromRight.active, .fromLeft.active, .fromCenter.active {
           background-size: 100% var(--border-width);

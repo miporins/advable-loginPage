@@ -3,10 +3,57 @@
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
   nav {
     font-weight: 600;
 
+    @media (max-width: 992px) {
+      text-align: center;
+
+      .nav-item .a-lines {
+        background-image: none;
+      }
+
+      hr { margin: 2rem 0; }
+
+      form {
+        padding-bottom: 1rem;
+        flex-direction: column;
+        align-items: center;
+
+        a {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    // linhas roxinhas no nav
+    a {
+      --border-width: 2px;
+      --bottom-distance: 0px;
+    
+      text-decoration: none;
+      font-size: large;
+      font-weight: bold;
+      display: inline-block;
+      border-radius: 1px;
+    }
+  
+    .a-lines {
+      background-image: linear-gradient($btn-primary, $btn-primary);
+      background-size: 0% 2px;
+      background-repeat: no-repeat;
+      transition: background-size 0.3s;
+    }
+
+    .fromRight { background-position: 100% calc(100% - var(--bottom-distance)); }
+  
+    .fromRight:hover, .fromLeft:hover, .fromCenter:hover, .fromRight.active, .fromLeft.active, .fromCenter.active { background-size: 100% var(--border-width); }
+    
+    .fromLeft { background-position: 0 calc(100% - var(--bottom-distance)); }
+    
+    .fromCenter { background-position: 50% calc(100% - var(--bottom-distance)); }
+
+    // btns de acesso e registro
     form {
       .btn-gratis {
         color: white!important;
@@ -14,13 +61,10 @@ body {
         opacity: 1!important;
         transition: .3s;
         border: 2px solid $btn-opacity!important;
-        
-      font-weight: 600;
+        font-weight: 600;
       }
 
-      .btn-gratis:hover {
-        background-color: $btn-primary!important;
-      }
+      .btn-gratis:hover { background-color: $btn-primary!important; }
 
       .btn-acesso {
         font-weight: 600;
@@ -29,66 +73,48 @@ body {
         color: white!important;
         opacity: 1!important;
       }
-      .btn-acesso:hover {
-        background-color: $btn-primary!important;
+
+      .btn-acesso:hover { background-color: $btn-primary!important; }
+    }
+  }
+
+  // section do titulo
+  #section-title {
+    padding: 18vh 0 13vh 0;
+
+    h2 { font-weight: 600; }
+  }
+
+  // section da descrição
+  #description {
+    .txt-description {
+      padding: 3rem 0;
+      max-width: 70em;
+      margin: auto;
+      
+      h3 {
+        border-bottom: solid 2px $btn-primary;
+        display: inline;
+        line-height: 4rem!important;
+        font-weight: 600;
       }
+      
+      .bi-patch-check-fill { color: $success; }
+
+      @media (max-width: 768px) { text-align: center; }
     }
   }
-
-  .section-title {
-    padding: 12vh 0 13vh 0;
-
-    h2 {
-    font-weight: 600;
-    }
-  }
-
-  .bi-patch-check-fill {
-    color: $success;
-  }
-
-  .txt-description {
-    padding: 3rem 0;
-    max-width: 50em;
-    margin: auto;
-
-    h3 {
-      border-bottom: solid 2px $btn-primary;
-      display: inline;
-      line-height: 4rem!important;
-      font-weight: 600;
-    }
-  }
-
-  .video-container {
-    width: 20%;
-    height: 50vh;
-    display: flex;
-    overflow: hidden;
-    margin: auto;
-  }
-
-  .functions {
+  
+  // section grid
+  #functions {
     .card {
-      background-color: rgb(33, 38, 50);
       padding: 1rem 0 1.2rem;
       border-radius: 15px;
-      width: 18rem;
-      
-      hr {
-        border-color: transparent;
-      }
-
-      .colorful-lines {
-        display: inline-block;
-        width: 120px;
-        border-bottom: solid 2px $btn-primary;
-        animation: slide-in 1s ease-out;
-        opacity: 1;
-      }
+      transition: .3s;
+      user-select: none;
 
       .card-body {
-        height: 210px;
+        height: 14rem;
         margin: auto;
         max-width: 18em;
       }
@@ -106,15 +132,32 @@ body {
       }
 
       .card-text {
-        font-weight: 300;
         max-width: 15rem;
         margin: auto;
       }
+
+      hr { border-color: transparent; }
+
+      .colorful-lines {
+        display: inline-block;
+        width: 100px;
+        border-bottom: solid 2px $btn-primary;
+        animation: slide-in 1s ease-out;
+        opacity: 1;
+      }
     }
+
+    .card:hover { border: 1px solid $btn-opacity; }
   }
 
-  section .icons-style {
-    font-size: 50px;
+  #wp-section {
+    .icons-style {
+      font-size: 40px;
+    }
+
+    .video-container {
+      height: 50vh;
+      margin: auto;
+    }
   }
-  
 }

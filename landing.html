@@ -13,7 +13,7 @@
 
 </head>
 <body data-bs-theme="dark">
-  <nav class="container-fluid navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="container-fluid navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container">
       <a class="navbar-brand" href="landing.html"><img style="width: 36px" src="./assets/imagens/logotipo.svg" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,13 +22,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-lg-0 m-auto gap-4">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Início</a>
+            <a class="nav-link active a-lines fromLeft" aria-current="page" href="#">Início</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sobre</a>
+            <a class="nav-link a-lines fromLeft" href="#">Sobre</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle a-lines fromLeft" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Suporte</a>
 
               <ul class="dropdown-menu">
@@ -39,7 +39,8 @@
               </ul>
           </li>
         </ul>
-        <form class="d-flex align-items-center" role="search">
+        <hr>
+        <form class="d-flex justify-content-center">
           <a class="btn me-2 btn-acesso shadow" href="index.html">Acesso</a>
           <a class="btn btn-gratis shadow" href="registro.html">Experimente grátis!</a>
         </form>
@@ -49,24 +50,24 @@
 
   <main class="container-fluid">
 
-    <section class="container-fluid border-bottom section-title">
+    <section id="section-title" class="border-bottom">
       <div class="text-center container lh-lg">
         <h2>Automatize a rotina do seu escritório</h2>
         <h5>Conheça a nova plataforma jurídica de gestão integrada para escritórios de advocacia</h5>
       </div>
     </section>
 
-    <section class="description container-fluid border-bottom d-flex">
+    <section id="description" class="border-bottom d-flex">
       <div class="container">
-        <div class="txt-description lh-lg">
-          <div class="pb-2">
+        <div class="txt-description lh-lg row">
+          <div>
             <h3>Advable</h3>
             <h5>O único software jurídico necessário para acompanhar processos</h5>
           </div>
-          <hr class="colorful-lines">
-          <div class="d-flex column-gap-5 pt-3">
-            <p class="row">Advable é uma ferramenta indispensável para advogados e escritórios de advocacia que desejam otimizar suas rotinas, com atualizações em tempo real e gestão de informações simplificada.</p>
-            <p class="row">Ao automatizar tarefas rotineiras do escritório com Advable, você aproveita um tempo valioso para se destacar em áreas essenciais de sua profissão, melhorando sua eficácia geral e sucesso.</p>
+          <hr class="my-4">
+          <div class="row">
+            <p class="col-xs-12 col-sm-6">Advable é uma ferramenta indispensável para advogados e escritórios de advocacia que desejam otimizar suas rotinas, com atualizações em tempo real e gestão de informações simplificada.</p>
+            <p class="col-sm-6">Ao automatizar tarefas rotineiras do escritório com Advable, você aproveita um tempo valioso para se destacar em áreas essenciais de sua profissão, melhorando sua eficácia geral e sucesso.</p>
           </div>
           <ul class="list-unstyled text-center mt-5">
             <li><i class="bi bi-patch-check-fill pe-2"></i>Desenvolvimento profissional aprimorado</li>
@@ -80,11 +81,11 @@
       
     </section>
 
-    <section class="container-fluid functions text-center border-bottom">
+    <section id="functions" class="text-center border-bottom">
       <div class="container">
-        <div class="row py-5">
-          <div class="col">
-            <div class="card m-auto shadow">
+        <div class="row py-5 g-5">
+          <div class="col-md-4 col-sm-6">
+            <div class="card shadow bg-body-tertiary">
               <img class="card-images" src="./assets/imagens/sino.png" alt="">
               <div class="card-body">
                 <p class="card-title">Acompanhamento de processos</p>
@@ -93,8 +94,8 @@
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card m-auto shadow">
+          <div class="col-md-4 col-sm-6">
+            <div class="card shadow bg-body-tertiary">
               <img class="card-images" src="./assets/imagens/calendario.png" alt="">
               <div class="card-body">
                 <p class="card-title">Gerencie compromissos</p>
@@ -103,8 +104,8 @@
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card m-auto shadow">
+          <div class="col-md-4 col-sm-6">
+            <div class="card shadow bg-body-tertiary">
               <img class="card-images" src="./assets/imagens/grafico.png" alt="">
               <div class="card-body">
                 <p class="card-title">Visualize estatísticas</p>
@@ -113,10 +114,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row pb-5">
-          <div class="col">
-            <div class="card m-auto shadow">
+          <div class="col-md-4 col-sm-6">
+            <div class="card shadow bg-body-tertiary">
               <img class="card-images" src="./assets/imagens/financas.png" alt="">
               <div class="card-body">
                 <p class="card-title">Administre suas finanças</p>
@@ -125,8 +124,8 @@
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card m-auto shadow">
+          <div class="col-md-4 col-sm-6">
+            <div class="card shadow bg-body-tertiary">
               <img class="card-images" src="./assets/imagens/online.png" alt="">
               <div class="card-body">
                 <p class="card-title">Organizanize e gerencie</p>
@@ -135,8 +134,8 @@
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card m-auto shadow">
+          <div class="col-md-4 col-sm-6">
+            <div class="card shadow bg-body-tertiary">
               <img class="card-images" src="./assets/imagens/doc.png" alt="">
               <div class="card-body">
                 <p class="card-title">Gerador de documentos jurídicos</p>
@@ -145,24 +144,24 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
+         </div>
+        
     </section>
 
-    <section class="container-fluid d-flex border-bottom">
-      <div class="container d-flex col flex-column align-items-center m-auto gap-4">
+    <section id="wp-section" class="d-flex border-bottom">
+      <div class="col col-lg-6 d-flex flex-column justify-content-center align-items-center text-center py-5 gap-4">
         <i class="bi bi-whatsapp icons-style"></i>
         <h3>Quer saber mais e também tirar dúvidas?</h3>
-        <a href="#" class="btn btn-success">Fale conosco no WhatsApp</a>
+        <a href="#" class="btn btn-success rounded-3 p-3">Fale conosco no <span class="fw-bold">WhatsApp</span></a>
       </div>
-      <figure class="video-container opacity-50 w-50">
-        <video class="" autoplay muted loop>
+      <figure class="video-container opacity-50 d-none d-lg-flex col w-100">
+        <video autoplay muted loop>
           <source src="./assets/pexels-jack-sparrow-5977124 (2160p).mp4" type="video/mp4">
         </video>
       </figure>
     </section>
 
-    <section class="container-fluid py-5">
+    <section class="py-5">
       <div class="container d-flex justify-content-center gap-5">
         <div class="card" style="width: 18rem;">
           <img src="https://blog.advable.com.br/wp-content/uploads/2023/03/Blog-Advable-3-1024x256.png" class="card-img-top" alt="...">
