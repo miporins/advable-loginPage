@@ -3,24 +3,31 @@
 }
 
 body {
+  font-family: 'Raleway', sans-serif;
   nav {
+    font-weight: 600;
+
     form {
-      .btns-landing {
+      .btn-gratis {
         color: white!important;
         background-color: $btn-opacity!important;
         opacity: 1!important;
         transition: .3s;
+        border: 2px solid $btn-opacity!important;
+        
+      font-weight: 600;
       }
 
-      .btns-landing:hover {
+      .btn-gratis:hover {
         background-color: $btn-primary!important;
       }
 
       .btn-acesso {
+        font-weight: 600;
         background-color: transparent!important;
+        border: 2px solid $btn-opacity!important;
         color: white!important;
         opacity: 1!important;
-        border: 1px solid $btn-opacity!important;
       }
       .btn-acesso:hover {
         background-color: $btn-primary!important;
@@ -29,7 +36,11 @@ body {
   }
 
   .section-title {
-    padding: 13vh 0 16vh 0;
+    padding: 12vh 0 13vh 0;
+
+    h2 {
+    font-weight: 600;
+    }
   }
 
   .bi-patch-check-fill {
@@ -37,15 +48,20 @@ body {
   }
 
   .txt-description {
-    padding: 4rem 0;
+    padding: 3rem 0;
     max-width: 50em;
     margin: auto;
+
+    h3 {
+      border-bottom: solid 2px $btn-primary;
+      display: inline;
+      line-height: 4rem!important;
+      font-weight: 600;
+    }
   }
 
-  // style="height: 100%; max-height: 30rem;" 
-
   .video-container {
-    width: 100%;
+    width: 20%;
     height: 50vh;
     display: flex;
     overflow: hidden;
@@ -55,25 +71,50 @@ body {
   .functions {
     .card {
       background-color: rgb(33, 38, 50);
-      padding: 2rem 0;
+      padding: 1rem 0 1.2rem;
+      border-radius: 15px;
+      width: 18rem;
+      
+      hr {
+        border-color: transparent;
+      }
+
+      .colorful-lines {
+        display: inline-block;
+        width: 120px;
+        border-bottom: solid 2px $btn-primary;
+        animation: slide-in 1s ease-out;
+        opacity: 1;
+      }
+
+      .card-body {
+        height: 210px;
+        margin: auto;
+        max-width: 18em;
+      }
 
       .card-images {
-        width: 4em;
+        width: 3em;
         margin: auto;
-        padding: 1rem 0;
+        padding: 1.5rem 0 .5rem;
       }
       
       .card-title {
+        font-size: large;
+        font-weight: bold;
+        line-height: 1.8rem;
       }
 
       .card-text {
-        // max-width: 16em;
+        font-weight: 300;
+        max-width: 15rem;
+        margin: auto;
       }
     }
   }
 
   section .icons-style {
-    font-size: 40px;
+    font-size: 50px;
   }
   
 }
