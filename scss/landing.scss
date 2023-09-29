@@ -79,11 +79,7 @@ body {
   }
 
   // section do titulo
-  #section-title {
-    padding: 18vh 0 13vh 0;
-
-    h2 { font-weight: 600; }
-  }
+  #section-title { padding: 17vh 0 13vh 0; }
 
   // section da descrição
   #description {
@@ -91,13 +87,6 @@ body {
       padding: 3rem 0;
       max-width: 70em;
       margin: auto;
-      
-      h3 {
-        border-bottom: solid 2px $btn-primary;
-        display: inline;
-        line-height: 4rem!important;
-        font-weight: 600;
-      }
       
       .bi-patch-check-fill { color: $success; }
 
@@ -125,16 +114,9 @@ body {
         padding: 1.5rem 0 .5rem;
       }
       
-      .card-title {
-        font-size: large;
-        font-weight: bold;
-        line-height: 1.8rem;
-      }
+      .card-title { font-size: large; }
 
-      .card-text {
-        max-width: 15rem;
-        margin: auto;
-      }
+      .card-text { max-width: 15rem; }
 
       hr { border-color: transparent; }
 
@@ -148,16 +130,26 @@ body {
     }
 
     .card:hover { border: 1px solid $btn-opacity; }
+  
+    h4 { font-weight: 400; }
   }
 
-  #wp-section {
-    .icons-style {
-      font-size: 40px;
-    }
+  .purple-border {
+    border-bottom: 2px solid $btn-primary;
+    display: inline;
+    padding-bottom: 10px;
+  }
 
-    .video-container {
-      height: 50vh;
-      margin: auto;
-    }
+  #btn-experimentar {
+    padding: 5rem 0;
+
+    .btn { background-color: $btn-opacity; }
+
+    .btn:hover { background-color: $btn-primary; }
+  }
+
+  // section de dúvidas
+  #wp-section {
+    .icons-style { font-size: 40px; }
   }
 }
