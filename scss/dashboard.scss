@@ -120,6 +120,12 @@ $sidebar-hovercolor: #0b0b0b;
       grid-area: 1 / 1 / 2 / 2; // Estica o content-right para ocupar todo o espaço disponível
     }
   }
+
+  .bi-whatsapp, .bi-globe2 {
+    color: black!important;
+  }
+
+
   
   
   // create a media query to change the grid-template-columns to 1fr when the screen size is less than 768px
