@@ -1,0 +1,24 @@
+  
+#button-addon2 { background-color: $btn-opacity; }
+
+#button-addon2:hover { background-color: $btn-primary; }
+
+.search { padding: 3rem 0 0; }
+
+.search .imagem-suporte { max-width: 180px; }
+
+@media (min-width: 990px){
+.cardsize-suporte { height: 14rem; }
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: $btn-opacity;
+  color: white;
+}
+
+.accordion-item {
+  opacity: .8;
+  transition: .2s;
+}
+
+.accordion-item:hover { opacity: 1; }
