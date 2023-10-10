@@ -4,6 +4,10 @@
 
 body {
   nav {
+    
+    .btn {
+      padding: 0.3rem;
+    }
 
     @media (max-width: 992px) {
       text-align: center;
@@ -86,6 +90,10 @@ body {
 
   // section da descrição
   #description {
+    img {
+      width: 21%;
+    }
+
     .txt-description {
       padding: 3rem 0;
       max-width: 70em;
@@ -130,6 +138,10 @@ body {
         animation: slide-in 1s ease-out;
         opacity: 1;
       }
+
+      .btn {
+        padding: 0.3rem;
+      }
     }
 
     .card:hover { border: 1px solid $btn-opacity; }
@@ -161,4 +173,9 @@ body {
 
   .btn-cards:hover { background-color: $btn-primary; }
 
+
+  
+  
 }
+
+
